@@ -1,0 +1,324 @@
+.cliente-list-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.cliente-list-container h1 {
+    font-size: 40px;
+    text-align: center;
+    color: #000;
+}
+
+.search-add-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 40%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.add-button {
+    background-color: #f5b921;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-button:hover {
+    background-color: #4CAF50;
+}
+
+.cliente-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.cliente-table th, .cliente-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.cliente-table th {
+    background-color: #2E8B57;
+    color: #fff;
+}
+
+.cliente-table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.cliente-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.cliente-foto {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Responsividade para tabelas */
+@media screen and (max-width: 768px) {
+    .cliente-list-container {
+        margin-left: 0;
+    }
+
+    .search-add-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-input, .add-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .cliente-table, .cliente-table thead, .cliente-table tbody, .cliente-table th, .cliente-table td, .cliente-table tr {
+        display: block;
+    }
+
+    .cliente-table thead tr {
+        display: none;
+    }
+
+    .cliente-table td {
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .cliente-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+        background-color: #2E8B57;
+        color: white;
+    }
+
+    .cliente-table tbody tr {
+        margin-bottom: 10px;
+        border-bottom: 2px solid #2E8B57;
+    }
+}
+
+.paginacao {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.paginacao button {
+    background-color: #2E8B57;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.paginacao button.active {
+    background-color: #f5b921;
+}
+
+.paginacao button:hover {
+    background-color: #4CAF50;
+}
+
+.cliente-table td[data-label="NomeCompleto"],
+.cliente-table td[data-label="Email"] {
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.cliente-table td[data-label="NomeCompleto"]:hover::after,
+.cliente-table td[data-label="Email"]:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: normal;
+    width: 300px;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cliente-table td[data-label="NomeCompleto"]:hover::before,
+.cliente-table td[data-label="Email"]:hover::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+}
+
+/* Responsividade paginação */
+@media screen and (max-width: 768px) {
+    .paginacao {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paginacao button {
+        margin: 5px 0;
+        width: 80%;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 1100;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content p {
+    margin: 20px 0;
+}
+
+.modal-content .form-group {
+    margin-bottom: 15px;
+}
+
+.modal-content .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-content .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-save {
+    background-color: #2E8B57;
+    color: white;
+}
+
+.btn-cancel {
+    background-color: red;
+    color: white;
+}
+
+.popup-success {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.popup-delete-success {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff4c4c;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.error-messages {
+    color: red;
+    margin-top: 10px;
+}
+
+.error-messages ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.error-messages li {
+    margin: 5px 0;
+}
+
+.modal-content .confirm-button {
+    background-color: red;
+    color: white;
+}
+
+.modal-content .cancel-button {
+    background-color: #f5b921;
+    color: white;
+}

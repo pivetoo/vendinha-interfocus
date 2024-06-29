@@ -1,0 +1,55 @@
+.sobre-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.sobre-content {
+    text-align: center;
+}
+  
+.sobre-content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #2E8B57;
+}
+  
+.sobre-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sobre-faq {
+    margin-top: 30px;
+}
+
+.sobre-faq h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2E8B57;
+}
+
+.sobre-faq p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sobre-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF6C37;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.sobre-button:hover {
+    background-color: #4CAF50;
+}

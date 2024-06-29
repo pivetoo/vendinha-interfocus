@@ -39,7 +39,7 @@ Bem-vindo ao projeto Vendinha Interfocus! Este site foi desenvolvido como parte 
 2. O arquivo do banco de dados está na main: 'database-schema', cole no seu banco de dados PostgreSQL.
 3. Configure a sua string de conexão com o banco de dados no arquivo `hibernate.cfg.xml`.
 4. Execute o projeto no Visual Studio (pressione F5 ou clique no botão de execução).
-5. Após isso, a API estará rodando com a porta 5173
+5. Após isso, a API estará rodando com a porta 7280.
 
 ### Configuração do Frontend
 

@@ -70,5 +70,5 @@ Bem-vindo ao projeto Vendinha Interfocus! Este site foi desenvolvido como parte 
 <img src="https://img.shields.io/static/v1?label=react&message=Frontend&color=blue&style=for-the-badge&logo=REACT"/>
 <img src="https://img.shields.io/static/v1?label=C%23&message=Backend&color=purple&style=for-the-badge&logo=CSharp"/>
 <img src="https://img.shields.io/static/v1?label=NHibernate&message=ORM&color=red&style=for-the-badge&logo=NHibernate"/>
-<img src="https://img.shields.io/static/v1?label=Azure&message=Frontend%20e%20Backend&color=0078D4&style=for-the-badge&logo=microsoft-azure&logoColor=white"/>
-<img src="https://img.shields.io/static/v1?label=AWS&message=Database&color=FF9900&style=for-the-badge&logo=amazon-aws&logoColor=white"/>
+<img src="https://img.shields.io/static/v1?label=Azure&message=Deploy Frontend%20e%20Backend&color=0078D4&style=for-the-badge&logo=microsoft-azure&logoColor=white"/>
+<img src="https://img.shields.io/static/v1?label=AWS&message=Deploy Database&color=FF9900&style=for-the-badge&logo=amazon-aws&logoColor=white"/>

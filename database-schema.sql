@@ -1,4 +1,4 @@
-create database vendinhainterfocus;
+create database vendinha;
 
 create sequence clientes_sequence;
 

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="VendinhaInterfocus" namespace="VendinhaInterfocus.Models.Entidades">
+	<class name="Divida" table="dividas">
+		<id name="Id" column="Id">
+			<generator class="sequence">
+				<param name ="sequence">dividas_sequence</param>
+			</generator>
+		</id>
+		<many-to-one name="Cliente" class="Cliente" column="ClienteId" not-null="true" />
+		<property name="Valor" column="Valor" not-null="true" />
+		<property name="Situacao" column="Situacao" not-null="true" />
+		<property name="DataCriacao" column="DataCriacao" not-null="true" />
+		<property name="DataPagamento" column="DataPagamento" />
+		<property name="Descricao" column="Descricao" />
+	</class>
+</hibernate-mapping>

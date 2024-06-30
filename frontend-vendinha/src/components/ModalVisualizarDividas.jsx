@@ -58,11 +58,11 @@ export default function ModalVisualizarDividas({ cliente, dividas, onClose, marc
                       <input type="checkbox" checked={dividasSelecionadas.includes(divida.id)} onChange={() => checkboxChange(divida.id)} />
                     )}
                   </td>
-                  <td>{divida.valor}</td>
-                  <td>{divida.descricao}</td>
-                  <td>{new Date(divida.dataCriacao).toLocaleDateString()}</td>
-                  <td>{divida.dataPagamento ? new Date(divida.dataPagamento).toLocaleDateString() : 'Em espera...'}</td>
-                  <td>
+                  <td data-label="Valor">{divida.valor}</td>
+                  <td data-label="Descrição">{divida.descricao}</td>
+                  <td data-label="Criação">{new Date(divida.dataCriacao).toLocaleDateString()}</td>
+                  <td data-label="Pagamento">{divida.dataPagamento ? new Date(divida.dataPagamento).toLocaleDateString() : 'Em espera...'}</td>
+                  <td data-label="Situação">
                     <span style={{ color: divida.situacao == 1 ? 'green' : (divida.situacao == 2 ? 'red' : '#ff8c00') }}>
                       {SITUACOES[divida.situacao]}
                     </span>
